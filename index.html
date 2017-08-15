@@ -151,10 +151,36 @@
   textarea {
       resize: none;
   }
-  #calendar-div{
-    text-align: center;
+  .responsiveCal {
+    position: relative;
+    padding-bottom: 75%;
+    height: 0;
+    overflow: hidden;
+  }
+  
+  .responsiveCal iframe {
+      position: absolute;
+      top:0;
+      left: 0;
+      width: 100%;
+      height: 100%;
   }
 
+  #youtube-div {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 35px;
+    height: 0;
+    overflow: hidden;
+}
+
+#youtube-div iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
   </style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -356,10 +382,11 @@ $('#gform').on('submit', function(e) {
 
 <!-- Container (Performances Section) -->
 <div id="performances" class="container">
-    <h3 class="text-center">UPCOMING PERFORMANCES</h3>
-    <div id="calendar-div">
-    <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showCalendars=0&amp;showTz=0&amp;height=500&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=f2bdance@gmail.com&amp;color=%23333333&amp;ctz=America%2FChicago" style="border-width:0" width="600" height="500" frameborder="0" scrolling="no"></iframe>
-    </div>
+    <h3>UPCOMING PERFORMANCES</h3>
+      <div class="responsiveCal">
+ 
+        <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showDate=0&amp;showPrint=0&amp;showCalendars=0&amp;showTz=0&amp;height=600&amp;wkst=2&amp;hl=nl&amp;bgcolor=%23FFFFFF&amp;src=f2bdance@gmail.com&amp;color=%23ffcf03&amp;ctz=America%2Chicago" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+      </div>
 </div>
 
 <!-- Container (Performance Request Section) -->
@@ -413,13 +440,13 @@ $('#gform').on('submit', function(e) {
   <div class="row">
     <div class="col-sm-3"></div>
     <div id="tw-div" class="col-sm-2"> 
-      <a href="http://www.twitter.com"><img style="width:50px;height:50px;" src="./images/Twitter_Logo_WhiteOnBlue.png"></a>
+      <a href="https://twitter.com/f2bdance"><img style="width:50px;height:50px;" src="./images/Twitter_Logo_WhiteOnBlue.png"></a>
     </div>
     <div id="fb-div" class="col-sm-2"> 
-      <a href="http://www.facebook.com"><img style="width:75px;height:50px;" src="./images/like-button-2015-06.png"></a>
+      <a href="https://www.facebook.com/FadeToBlackDanceEnsemble"><img style="width:75px;height:50px;" src="./images/like-button-2015-06.png"></a>
     </div>
     <div id="yt-div" class="col-sm-2"> 
-      <a href="http://www.youtube.com"><img  style="width:75px;height:60px;" src="./images/YouTube-logo-full_color.jpg" alt="youtube"></a>
+      <a href="https://www.youtube.com/user/f2bdance"><img  style="width:75px;height:60px;" src="./images/YouTube-logo-full_color.jpg" alt="youtube"></a>
     </div>
     <div class="col-sm-3"></div>
   </div>
