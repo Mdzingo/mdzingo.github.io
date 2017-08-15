@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Fade To Black</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  body {
+      font: 400 15px/1.8 Lato, sans-serif;
+      color: #777;
+  }
+  h3, h4 {
+      margin: 10px 0 30px 0;
+      letter-spacing: 10px;      
+      font-size: 20px;
+      color: #111;
+  }
+  .container {
+      padding: 80px 120px;
+  }
+  .person {
+      border: 10px solid transparent;
+      margin-bottom: 25px;
+      width: 80%;
+      height: 80%;
+      opacity: 0.7;
+  }
+  .person:hover {
+      border-color: #f1f1f1;
+  }
+  .carousel-inner img {
+      -webkit-filter: grayscale(90%);
+      filter: grayscale(90%); /* make all photos black and white */ 
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+  }
+  .carousel-caption h3 {
+      color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+  .bg-1 {
+      background: #2d2d30;
+      color: #bdbdbd;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail p {
+      margin-top: 15px;
+      color: #555;
+  }
+  .btn {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #f1f1f1;
+      border-radius: 0;
+      transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+      border: 1px solid #333;
+      background-color: #fff;
+      color: #000;
+  }
+  .modal-header, h4, .close {
+      background-color: #333;
+      color: #fff !important;
+      text-align: center;
+      font-size: 30px;
+  }
+  .modal-header, .modal-body {
+      padding: 40px 50px;
+  }
+  .nav-tabs li a {
+      color: #777;
+  }
+  #googleMap {
+      width: 100%;
+      height: 400px;
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+  }  
+  .navbar {
+      font-family: Montserrat, sans-serif;
+      margin-bottom: 0;
+      background-color: #2d2d30;
+      border: 0;
+      font-size: 11px !important;
+      letter-spacing: 4px;
+      opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+      color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+      color: #fff !important;
+  }
+  .navbar-nav li.active a {
+      color: #fff !important;
+      background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+  }
+  .open .dropdown-toggle {
+      color: #fff;
+      background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+      color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+      background-color: red !important;
+  }
+  footer {
+      background-color: #2d2d30;
+      color: #f5f5f5;
+      padding: 32px;
+  }
+  footer a {
+      color: #f5f5f5;
+  }
+  footer a:hover {
+      color: #777;
+      text-decoration: none;
+  }  
+  .form-control {
+      border-radius: 0;
+  }
+  textarea {
+      resize: none;
+  }
+  #calendar-div{
+    text-align: center;
+  }
+
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<script src="assets/js/jquery.min.js"></script>
+<script type="text/javascript">var submitted=false;</script>
+<script type="text/javascript">
+$('#gform').on('submit', function(e) {
+  $('#gform *').fadeOut(2000);
+  $('#gform').prepend('Your submission has been processed...');
+  });
+</script>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">F2B</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#myPage">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#team">TEAM</a></li>
+        <li><a href="#performances">CALENDAR</a></li>
+        <li><a href="#request">REQUEST PERFORMANCE</a></li>
+        <li><a href="#media">MEDIA</a></li>
+        <li><a href="#tryouts">TRYOUTS</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active" style="height:900px;">
+        <img src="./images/car1.jpg" alt="The Team" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>Tryouts</h3>
+          <p>Join the fade to black family.</p>
+        </div>      
+      </div>
+
+      <div class="item" style="height:900px;">
+        <img src="./images/car2.jpg" alt="Tryouts" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>Fall Show</h3>
+          <p>November 15th, 2017 2:00pm</p>
+        </div>      
+      </div>
+    
+      <div class="item" style="height:900px;">
+        <img src="./images/car3.jpg" alt="Events" width="1200" height="900px">
+        <div class="carousel-caption">
+        </div>      
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<!-- Container (About Section) -->
+<div id="about" class="container text-center">
+  <h3>ABOUT FADE TO BLACK</h3>
+  <p><em>Performance team at Texas A&M!</em></p>
+  <p>Fade to Black Dance Ensemble was founded in 1991 on the campus of Texas A&M University by several young African-American women. Since it's birth, Fade to Black's diversity has grown by leaps and bounds including members from all over the world and from many different backgrounds; it is that appreciation of an individual's uniqueness and culture that makes F2B a stand-out and stand-up organization.</p>
+  <br>
+  <p>Today, Fade to Black has had the honor of performing at many of Texas A&M's events such as Fish Camp, Songfest, EXCEL conference, and Aggie Ring days, just to name a few. F2B has always been well known for the unique hip-hop dances that define its cultural basis however, members of Fade to Black are always versatile. Fade to Black has branched out to many different styles including: Hip-hop, Jazz, Tap, Lyrical, Pointe, Salsa, and African. Fade to Black will continue on this path to success while promoting diversity through dance and service while adding support and awareness of cultures at Texas A&M University and in the surrounding communities.</p>
+  <br>
+</div>
+
+<!-- Container (Team Section) -->
+<div id="team" class="bg-1">
+  <div class="container text-center">
+    <h3>MEET THE TEAM</h3><br>
+    <h3>2017-2018 OFFICERS</h3>
+    <div class="row">
+      <div class="col-sm-4">
+        <p class="text-center"><strong>President</strong></p>
+        <a href="#demo" data-toggle="collapse">
+          <img src="./images/president.jpg" class="img-circle person" alt="Emily Schmidt" width="255" height="255">
+        </a>
+        <div id="demo" class="collapse">
+          <p>Emily Schmidt</p>
+          <p>Member since 2013</p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <p class="text-center"><strong>Vice President</strong></p>
+        <a href="#demo2" data-toggle="collapse">
+          <img src="./images/vp.jpg" class="img-circle person" alt="Rob McClendon" width="255" height="255">
+        </a>
+        <div id="demo2" class="collapse">
+          <p>Rob McClendon</p>
+          <p>Member since 1988</p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <p class="text-center"><strong>Director of Dance</strong></p>
+        <a href="#demo3" data-toggle="collapse">
+          <img src="./images/dod.jpg" class="img-circle person" alt="Elijah Upchurch" width="255" height="255">
+        </a>
+        <div id="demo3" class="collapse">
+          <p>Elijah Upchurch</p>
+          <p>Member since 2013</p>
+        </div>
+      </div>
+    </div><br>
+    <div class="row">
+      <div class="col-sm-4">
+        <p class="text-center"><strong>Secretary</strong></p>
+        <a href="#demo4" data-toggle="collapse">
+          <img src="./images/sec.jpg" class="img-circle person" alt="Jaycee Jones" width="255" height="255">
+        </a>
+        <div id="demo4" class="collapse">
+          <p>Jaycee Jones</p>
+          <p>Member since 2014</p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <p class="text-center"><strong>Director of Publicity</strong></p>
+        <a href="#demo5" data-toggle="collapse">
+          <img src="./images/dop.jpg" class="img-circle person" alt="Samantha Snider" width="255" height="255">
+        </a>
+        <div id="demo5" class="collapse">
+          <p>Samantha Snider</p>
+          <p>Member since 2014</p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <p class="text-center"><strong>Assistant Director of Dance</strong></p>
+        <a href="#demo6" data-toggle="collapse">
+          <img src="./images/adod.jpg" class="img-circle person" alt="Jada Stith" width="255" height="255">
+        </a>
+        <div id="demo6" class="collapse">
+          <p>Jada Stith</p>
+          <p>Member since 2014</p>
+        </div>
+      </div>
+    </div><br>
+    <div class="row">
+      <div class="col-sm-4">
+        <p class="text-center"><strong>Historian</strong></p>
+        <a href="#demo7" data-toggle="collapse">
+          <img src="./images/historian.jpg" class="img-circle person" alt="Sarah Benton" width="255" height="255">
+        </a>
+        <div id="demo7" class="collapse">
+          <p>Sarah Benton</p>
+          <p>Member since 2013</p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+      </div>
+      <div class="col-sm-4">
+        <p class="text-center"><strong>Treasurer</strong></p>
+        <a href="#demo8" data-toggle="collapse">
+          <img src="./images/treasurer.jpg" class="img-circle person" alt="Emily Clifton" width="255" height="255">
+        </a>
+        <div id="demo8" class="collapse">
+          <p>Emily Clifton</p>
+          <p>Member since 2014</p>
+        </div>
+      </div>
+    </div><br>
+    <h3>2016-2017 TEAM</h3>
+    <div class="row">
+      <div class="col-sm-4">
+        <p>Alfred Boss<br>Allen Pham<br>Aloura Alvarado<br>Amber Masqueso<br>Audrey Menke<br>Ayana Salone<br>Becca Sterner<br>Bianca Amador<br>Breelan Statham<br>Brooke Griffin<br>Chris Garcia<br>Christina El-Hage<br>Cori Faverola<br>Daniel Lian<br>David Sweet<br>Elaina Latz<br>Elijah Upchurch<br>Emilee Deleon<br>Emily Clifton<br>Emily Hildinger<br>Emily Ross</p>
+      </div>
+      <div class="col-sm-4">
+        <p>Emily Schmidt<br>Hannah Hildinger<br>Hannah Sosa<br>Hayley Henry<br>Jada Stith<br>Jason Jucker<br>Jaycee Jones<br>Jhane Price<br>John Drinkwater<br>John Harris<br>Jordan-lee Bismark<br>Kaitie Fredin<br>Kaitlin Powell<br>Kara Wood<br>Kate Rosenberg<br>Kayla Millsap<br>Kelsi Jones<br>Kendyl Spears<br>Lauren Nowlin<br>Mary DeVillez<br>Matthew Reyes<br>Maura Perez</p>
+      </div>
+      <div class="col-sm-4">
+        <p>McKayla Herink<br>McKenzie Creek<br>Megan Lainez<br>Melissa Regan<br>Misha Roznowski<br>Morgan Monzingo<br>Natalie Escalante<br>Nigel Wilson<br>Rachel Pollock<br>Rayna Fretty<br>Riana Betonio<br>Rob McClendon<br>Sabrina Zuniga<br>Samantha Snider<br>Sarah Benton<br>Sarah Fleming<br>Tania Aquino<br>Tara Moore<br>Taylor Weist<br>Vikash Ravi<br>Viridiana Olmos</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Performances Section) -->
+<div id="performances" class="container">
+    <h3 class="text-center">UPCOMING PERFORMANCES</h3>
+    <div id="calendar-div">
+    <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showCalendars=0&amp;showTz=0&amp;height=500&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=f2bdance@gmail.com&amp;color=%23333333&amp;ctz=America%2FChicago" style="border-width:0" width="600" height="500" frameborder="0" scrolling="no"></iframe>
+    </div>
+</div>
+
+<!-- Container (Performance Request Section) -->
+<div id="request" class="bg-1">
+<div  class="container">
+  <h3 class="text-center">PERFORMANCE REQUEST</h3>
+
+  <div class="row">
+    <div class="col-md-4">
+      <p>Do you want Fade to Black to perform at your event?</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span>College Station, TX</p>
+      <p><span class="glyphicon glyphicon-envelope"></span>Email: f2bdance@gmail.com</p>
+    </div>
+
+    <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLScRo0gnfMR9EqqRNfXGypF04m1ECAV5hdIxWjnuFlO_5Ung7Q/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+      <div class="col-md-8">
+        <div class="row">
+          <div class="col-sm-6 form-group">
+            <input class="form-control" id="name" name="entry.1713152752" placeholder="Name" type="text" required>
+          </div>
+          <div class="col-sm-6 form-group">
+            <input class="form-control" id="email" name="entry.1525656587" placeholder="Email" type="email" required>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 form-group">
+                <input class="form-control" id="organization" name="entry.1561975634" placeholder="Organization" type="text" required>
+            </div>
+        </div>
+        <textarea class="form-control" id="comments" name="entry.1054557798" placeholder="Description of Event" rows="5"></textarea>
+        <br>
+        <div class="row">
+          <div class="col-md-12 form-group">
+            <button class="btn pull-right" type="submit">Send</button>
+          </div>
+          <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+        </div>
+      </div>
+    </form>
+  </div>  
+</div>
+</div>
+
+<!-- Container (Media Section) -->
+<div id="media" class="container text-center">
+  <h3>SOCIAL MEDIA</h3>
+  <div id="youtube-div">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/3kProvvfSA8" frameborder="0" allowfullscreen></iframe>
+  </div><br>
+  <p>Follow us on social media to stay up to date on what's going on in Fade to Black!</p><br>
+  <div class="row">
+    <div class="col-sm-3"></div>
+    <div id="tw-div" class="col-sm-2"> 
+      <a href="http://www.twitter.com"><img style="width:50px;height:50px;" src="./images/Twitter_Logo_WhiteOnBlue.png"></a>
+    </div>
+    <div id="fb-div" class="col-sm-2"> 
+      <a href="http://www.facebook.com"><img style="width:75px;height:50px;" src="./images/like-button-2015-06.png"></a>
+    </div>
+    <div id="yt-div" class="col-sm-2"> 
+      <a href="http://www.youtube.com"><img  style="width:75px;height:50px;" src="./images/Youtube-logo-full_color.png"></a>
+    </div>
+    <div class="col-sm-3"></div>
+  </div>
+</div>
+
+<!-- Container (Tryouts Section) -->
+<div id="tryouts" class="bg-1">
+  <div class="container">
+    <h3 class="text-center">FALL 2017 TRYOUTS</h3><br>
+    <p class="text-center">More information will be posted in the upcoming weeks.</p>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+</footer>
+</body>
+</html>
