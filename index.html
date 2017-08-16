@@ -35,7 +35,7 @@
       color: #111;
   }
   .container {
-      padding: 80px 120px;
+      padding: 60px 120px;
   }
   .person {
       border: 10px solid transparent;
@@ -176,8 +176,8 @@
       position: absolute;
       top:0;
       left: 0;
-      width: 100%;
-      height: 100%;
+      width: 95%;
+      height: 60%;
   }
 
   #youtube-div {
@@ -259,8 +259,7 @@ $('#gform').on('submit', function(e) {
         <li><a href="#about">ABOUT</a></li>
         <li><a href="#team">TEAM</a></li>
         <li><a href="#performances">CALENDAR</a></li>
-        <li><a href="#request">REQUEST PERFORMANCE</a></li>
-        <li><a href="#media">MEDIA</a></li>
+        <li><a href="#performances">REQUEST PERFORMANCE</a></li>
         <li><a href="#tryouts">TRYOUTS</a></li>
       </ul>
     </div>
@@ -304,11 +303,27 @@ $('#gform').on('submit', function(e) {
 <!-- Container (About Section) -->
 <div id="about" class="container text-center">
   <h3>ABOUT FADE TO BLACK</h3>
-  <p><em>Performance team at Texas A&M!</em></p>
-  <p>Fade to Black Dance Ensemble was founded in 1991 on the campus of Texas A&M University by several young African-American women. Since it's birth, Fade to Black's diversity has grown by leaps and bounds including members from all over the world and from many different backgrounds; it is that appreciation of an individual's uniqueness and culture that makes F2B a stand-out and stand-up organization.</p>
-  <br>
-  <p>Today, Fade to Black has had the honor of performing at many of Texas A&M's events such as Fish Camp, Songfest, EXCEL conference, and Aggie Ring days, just to name a few. F2B has always been well known for the unique hip-hop dances that define its cultural basis however, members of Fade to Black are always versatile. Fade to Black has branched out to many different styles including: Hip-hop, Jazz, Tap, Lyrical, Pointe, Salsa, and African. Fade to Black will continue on this path to success while promoting diversity through dance and service while adding support and awareness of cultures at Texas A&M University and in the surrounding communities.</p>
-  <br>
+  <div class="row">
+    <div class="col-md-6">
+      <p>Fade to Black Dance Ensemble was founded in 1991 on the campus of Texas A&M University by several young African-American women. Since it's birth, Fade to Black's diversity has grown by leaps and bounds including members from all over the world and from many different backgrounds; it is that appreciation of an individual's uniqueness and culture that makes F2B a stand-out and stand-up organization.</p>
+      <br>
+      <p>Today, Fade to Black has had the honor of performing at many of Texas A&M's events such as Fish Camp, Songfest, EXCEL conference, and Aggie Ring days, just to name a few. F2B has always been well known for the unique hip-hop dances that define its cultural basis however, members of Fade to Black are always versatile. Fade to Black has branched out to many different styles including: Hip-hop, Jazz, Tap, Lyrical, Pointe, Salsa, and African. Fade to Black will continue on this path to success while promoting diversity through dance and service while adding support and awareness of cultures at Texas A&M University and in the surrounding communities.</p>
+      <br>
+    </div>
+    <div class="col-md-6">
+    <div id="youtube-div">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/3kProvvfSA8" frameborder="0" allowfullscreen></iframe>
+      </div><br>
+    </div>
+  </div>
+  
+  <p><em>Follow us on social media to stay up to date on what's going on in Fade to Black!</em></p>
+  <div class="row">
+    <a href="https://www.facebook.com/FadeToBlackDanceEnsemble/" class="fa fa-facebook"></a>
+    <a href="https://twitter.com/f2bdance" class="fa fa-twitter"></a>
+    <a href="https://www.instagram.com/fadetoblacktamu/" class="fa fa-instagram"></a>
+    <a href="https://www.youtube.com/channel/UCOoATkStZ9XtxD7XaNHqUMQ" class="fa fa-youtube"></a>
+  </div>
 </div>
 
 <!-- Container (Team Section) -->
@@ -420,66 +435,40 @@ $('#gform').on('submit', function(e) {
 </div>
 
 <!-- Container (Performances Section) -->
-<div id="performances" class="container">
+<div id="performances" class="container text-center">
     <h3>UPCOMING PERFORMANCES</h3>
-      <div class="responsiveCal">
- 
-        <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showDate=0&amp;showPrint=0&amp;showCalendars=0&amp;showTz=0&amp;height=600&amp;wkst=2&amp;hl=nl&amp;bgcolor=%23FFFFFF&amp;src=f2bdance@gmail.com&amp;color=%23ffcf03&amp;ctz=America%2Chicago" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-      </div>
-</div>
-
-<!-- Container (Performance Request Section) -->
-<div id="request" class="bg-1">
-<div  class="container">
-  <h3 class="text-center">PERFORMANCE REQUEST</h3>
-
-  <div class="row">
-    <div class="col-md-4">
-      <p>Do you want Fade to Black to perform at your event?</p>
-      <p><span class="glyphicon glyphicon-map-marker"></span>College Station, TX</p>
-      <p><span class="glyphicon glyphicon-envelope"></span>Email: f2bdance@gmail.com</p>
-    </div>
-
-    <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLScRo0gnfMR9EqqRNfXGypF04m1ECAV5hdIxWjnuFlO_5Ung7Q/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
-      <div class="col-md-8">
-        <div class="row">
-          <div class="col-sm-6 form-group">
-            <input class="form-control" id="name" name="entry.1713152752" placeholder="Name" type="text" required>
-          </div>
-          <div class="col-sm-6 form-group">
-            <input class="form-control" id="email" name="entry.1525656587" placeholder="Email" type="email" required>
-          </div>
+      <div class="row">
+        <div class="responsiveCal col-md-6">
+          <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showDate=0&amp;showPrint=0&amp;showCalendars=0&amp;showTz=0&amp;height=400&amp;wkst=2&amp;hl=nl&amp;bgcolor=%23FFFFFF&amp;src=f2bdance@gmail.com&amp;color=%23ffcf03&amp;ctz=America%2Chicago" style="border-width:0" width="400" height="300" frameborder="0" scrolling="no"></iframe>
         </div>
-        <div class="row">
-            <div class="col-sm-12 form-group">
-                <input class="form-control" id="organization" name="entry.1561975634" placeholder="Organization" type="text" required>
-            </div>
-        </div>
-        <textarea class="form-control" id="comments" name="entry.1054557798" placeholder="Description of Event" rows="5"></textarea>
-        <br>
-        <div class="row">
-          <div class="col-md-12 form-group">
-            <button class="btn pull-right" type="submit">Send</button>
-          </div>
-          <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+        <div class="col-md-6">
+            <p>Do you want Fade to Black to perform at your event?</p>
+            <p><span class="glyphicon glyphicon-envelope"></span>Email: f2bdance@gmail.com</p>
+            <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLScRo0gnfMR9EqqRNfXGypF04m1ECAV5hdIxWjnuFlO_5Ung7Q/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+              <div class="row">
+                <div class="col-sm-6 form-group">
+                  <input class="form-control" id="name" name="entry.1713152752" placeholder="Name" type="text" required>
+                </div>
+                <div class="col-sm-6 form-group">
+                  <input class="form-control" id="email" name="entry.1525656587" placeholder="Email" type="email" required>
+                </div>
+              </div>
+              <div class="row">
+                  <div class="col-sm-12 form-group">
+                      <input class="form-control" id="organization" name="entry.1561975634" placeholder="Organization" type="text" required>
+                  </div>
+              </div>
+              <textarea class="form-control" id="comments" name="entry.1054557798" placeholder="Description of Event" rows="5"></textarea>
+              <br>
+              <div class="row">
+                <div class="col-md-12 form-group">
+                  <button class="btn pull-right" type="submit">Send</button>
+                </div>
+                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+              </div>
+            </form>
         </div>
       </div>
-    </form>
-  </div>  
-</div>
-</div>
-
-<!-- Container (Media Section) -->
-<div id="media" class="container text-center">
-  <h3>SOCIAL MEDIA</h3>
-  <div id="youtube-div">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/3kProvvfSA8" frameborder="0" allowfullscreen></iframe>
-  </div><br>
-  <p>Follow us on social media to stay up to date on what's going on in Fade to Black!</p><br>
-    <a href="https://www.facebook.com/FadeToBlackDanceEnsemble/" class="fa fa-facebook"></a>
-    <a href="https://twitter.com/f2bdance" class="fa fa-twitter"></a>
-    <a href="https://www.instagram.com/fadetoblacktamu/" class="fa fa-instagram"></a>
-    <a href="https://www.youtube.com/channel/UCOoATkStZ9XtxD7XaNHqUMQ" class="fa fa-youtube"></a>
 </div>
 
 <!-- Container (Tryouts Section) -->
